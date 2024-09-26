@@ -16,6 +16,9 @@ public class Task5 implements Task{
     private Queue<String> queue;
     private boolean isRunning;
 
+    public Task5(){
+
+    }
     public Task5(Queue<String> queue){
         this.queue = queue;
         isRunning = false;
@@ -46,7 +49,7 @@ public class Task5 implements Task{
         }
     }
 
-    public static void main(String[] args) { //  test the class functionality
+    public static void execute5Task(){
         Queue<String> queue = new LinkedList<>();
         queue.add("First...");
         queue.add("Second...");
@@ -63,6 +66,10 @@ public class Task5 implements Task{
             e.printStackTrace();
         }
         task.stop();
+    }
+
+    public static void main(String[] args) { //  test the class functionality
+        execute5Task();
     }
 }
 

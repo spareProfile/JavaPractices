@@ -17,7 +17,8 @@ import com.fasterxml.jackson.databind.JsonNode;
  */
 
 public class Task {
-    public static void main(String[] args) throws IOException, InterruptedException {
+
+    public static void execute4Task() {
         try {
             HttpClient client = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()
@@ -49,5 +50,10 @@ public class Task {
 
 
         }
+
+    }
+
+    public static void main(String[] args) {
+        execute4Task();
     }
 }

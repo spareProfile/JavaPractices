@@ -17,9 +17,7 @@ import java.util.List;
  */
 
 public class Task {
-
-    public static void main(String[] args) {
-
+    public static void execute3Task(){
         List<Employee> list = new ArrayList<>();
         list.add(new Employee("Jane Air", 30, "HR", 15000));
         list.add(new Employee("John Smith", 35, "Finance", 20000));
@@ -31,6 +29,10 @@ public class Task {
         List<String> list2 = list.stream().map(e -> e.getFullName() + " - " + e.getDepartment()).toList();
         //System.out.println(list2);
         list2.stream().forEach(System.out::println);
+    }
 
+
+    public static void main(String[] args) {
+        execute3Task();
     }
 }

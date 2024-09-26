@@ -31,11 +31,10 @@ public class Task {
         return list;
     }
 
-    public static void main(String[] args) {
+    public static void execute2Task(){
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the number of elements in the array: ");
         int size = scanner.nextInt();
-        scanner.close();
         List<Double> list = new ArrayList<>();
         Random random = new Random();
         for (int i = 0; i < size; i++) {
@@ -47,6 +46,10 @@ public class Task {
 
         System.out.println("Initial array: " + initial_list);
         System.out.println("Sorted: " + list);
+    }
+
+    public static void main(String[] args) {
+        execute2Task();
 
 
     }

@@ -13,11 +13,10 @@ import java.util.Scanner;
 
 public class Task {
 
-    public static void main(String[] args) {
+    public static void execute1Task(){
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the number of elements in the array: ");
         int size = scanner.nextInt();
-        scanner.close();
         int[] array = new int[size];
         Random random = new Random();
         for (int i = 0; i < size; i++) {
@@ -36,6 +35,9 @@ public class Task {
             System.out.println("Array:  "+ Arrays.toString(array));
             System.out.println("The last positive number is: " + lastPosnNum);
         }
-
     }
+
+    public static void main(String[] args) {
+        execute1Task();
+}
 }
