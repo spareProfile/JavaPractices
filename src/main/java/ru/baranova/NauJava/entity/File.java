@@ -8,7 +8,10 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import jakarta.xml.bind.annotation.XmlTransient;
 import jakarta.persistence.Column;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.CascadeType;
 
@@ -34,10 +37,14 @@ public class File {
     @Column
     private Long uploadedAt;
 
+    @JsonIgnore
+    @XmlTransient
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "file_meta_id", nullable = false)
     private FileMeta file_meta;
 
+    @JsonIgnore
+    @XmlTransient
     @ManyToOne
     @JoinColumn(name = "folder_id", nullable = false)
     private Folder folder;

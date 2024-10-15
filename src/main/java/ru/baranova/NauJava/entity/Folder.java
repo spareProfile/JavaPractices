@@ -7,9 +7,12 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.xml.bind.annotation.XmlTransient;
 import jakarta.persistence.Column;
 import jakarta.persistence.OneToMany;
 import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "folders")

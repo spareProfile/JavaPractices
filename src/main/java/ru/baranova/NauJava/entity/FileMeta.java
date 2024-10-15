@@ -4,11 +4,15 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import jakarta.xml.bind.annotation.XmlTransient;
 import jakarta.persistence.Column;
 
 import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "FileMeta")
@@ -30,6 +34,8 @@ public class FileMeta {
     @Column
     private List<String> tags; // todo add tags to database
 
+    @JsonIgnore
+    @XmlTransient
     @OneToOne(mappedBy = "file_meta")
     private File file;
 
