@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>File List</title>
+</head>
+<body>
+<h1>File List</h1>
+<table border="1" style="width: 100%">
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Link</th>
+<th>Uploaded At</th>
+<th>Size</th>
+<th>Folder</th>
+</tr>
+<tr th:each="file : ${files}">
+    <td th:text="${file.id}"></td>
+<td th:text="${file.name}"></td>
+<td th:text="${file.link}"></td>
+<td th:text="${file.uploadedAt}"></td>
+<td th:text="${file.fileMeta.size}"></td>
+<td th:text="${file.folder.folderName}"></td>
+</tr>
+</table>
+</body>
+</html>
