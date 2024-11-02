@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>report/(s)</title>
+</head>
+<body>
+<h1>Report/(s)</h1>
+<table border="1" style="width: 100%">
+<tr>
+<th>ID</th>
+<th>Registered users</th>
+<th>User Search Time (ms)</th>
+<th>File list (names only)</th>
+<th>File Search Time (ms)</th>
+<th>status</th>
+<th>createdAt</th>
+<th>Full time (ms)</th>
+</tr>
+<tr th:each="report : ${reports}">
+    <td th:text="${report.id}"></td>
+    <td th:text="${report.UserCount}"></td>
+    <td th:text="${report.UserSearchTime}"></td>
+    <td th:text="${report.getFilesStr}"></td>
+    <td th:text="${report.FileSearchTime}"></td>
+    <td th:text="${report.status}"></td>
+    <td th:text="${report.createdAt}"></td>
+    <td th:text="${report.FullTime}"></td>
+</tr>
+</table>
+</body>
+</html>
